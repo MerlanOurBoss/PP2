@@ -10,24 +10,34 @@ namespace Task2
             FileStream fileStream = new FileStream(@"C:\Users\Merlan\Desktop\LABS\READ.txt", FileMode.Open, FileAccess.Read);
             StreamReader sr = new StreamReader(fileStream);
 
+            FileStream fs = new FileStream(@"C:\Users\Merlan\Desktop\LABS\WRITE.txt", FileMode.Create, FileAccess.Write);
+            StreamWriter sw = new StreamWriter(fs);
+
+
             String line = sr.ReadLine();
 
             String[] stringNumbers = line.Split(" ");
 
-            int sum = 0;
-
             for (int i = 0; i < stringNumbers.Length; ++i)
             {
-                int num = int.Parse(stringNumbers[i]);
-                sum += num;
+                int y = int.Parse(stringNumbers[i]);
+                int x = 1;
+                for (int j = 2; j < y; j++)
+                {
+                    if (y % j == 0)
+                    {
+                        x = 0;
+                    }
+                }
+                if (x == 1 && y > 1)
+                    sw.Write(y + " ");
+                
             }
-
-            Console.WriteLine(sum);
-
-
 
             sr.Close();
             fileStream.Close();
+            sw.Close();
+            fs.Close();
         }
     }
 }
