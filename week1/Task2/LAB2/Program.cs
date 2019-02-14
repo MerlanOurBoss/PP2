@@ -43,11 +43,11 @@ namespace Lab2
     {
         static void Main(string[] args)
         {
-            Student Askar = new Student("Askar", "18BD111345");
+            Student Merlan = new Student("Merlan", "18BD111148");
             Console.WriteLine();
-            Student Beisenbek = new Student("Beisenbek", "18BD123456");
+            Student Meirambek = new Student("Meirambek", "18BD123456");
             Console.WriteLine();
-            Student Daulet = new Student();
+            Student Maks = new Student();
             Console.ReadKey();
         }
     }

@@ -1,14 +1,15 @@
-﻿using System;
+﻿
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task1
+namespace Task2
 {
     class Program
-    {   
+    {
         static void Main(string[] args)
         {
             FileStream fs = new FileStream(@"C:\Users\Merlan\Desktop\LABS\READ.txt", FileMode.Open, FileAccess.Read);
@@ -29,7 +30,11 @@ namespace Task1
             else
             {
                 Console.WriteLine("No");
-            }   
+            }
+
+
+
+            
 
         }
     }
