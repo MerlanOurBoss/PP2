@@ -11,18 +11,18 @@ namespace Task1
     {   
         static void Main(string[] args)
         {
-            FileStream fs = new FileStream(@"C:\Users\Merlan\Desktop\LABS\READ.txt", FileMode.Open, FileAccess.Read);
-            StreamReader sr = new StreamReader(fs);
+            FileStream fs = new FileStream(@"C:\Users\Merlan\Desktop\LABS\READ.txt", FileMode.Open, FileAccess.Read); //FileStream аркылы папканы окуга және жазуға  мүмкіндік аламыз
+            StreamReader sr = new StreamReader(fs);// StreamReader ол ақпаратты санайтын ағын
                         
             string t;
-            t = sr.ReadToEnd();
+            t = sr.ReadToEnd(); // файлдағы элемментерді t-ға береміз
 
-            char[] arr = t.ToCharArray();
-            Array.Reverse(arr);
+            char[] arr = t.ToCharArray(); // стирнг t чарга болеміз
+            Array.Reverse(arr); // оны кері айналдырам
 
-            string m = new string(arr);
+            string m = new string(arr); // сол айналдырғанды m-ға салам
 
-            if ( t == m)
+            if ( t == m) // тексерем Полиндром екендігін
             {
                 Console.WriteLine("Yes");
             }

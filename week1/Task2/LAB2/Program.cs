@@ -6,33 +6,33 @@ using System.Threading.Tasks;
 
 namespace Lab2
 {
-    class Student
+    class Student // создаем класс Студент
     {
-        public string name;
-        public string id;
-        public int year;
+        public string name; // имя Студента
+        public string id; // айди Студента
+        public int year; // год Студента
 
-        public Student()
+        public Student() // конструктор без параметров
         {
-            name = Console.ReadLine();
-            id = Console.ReadLine();
+            name = Console.ReadLine(); // введем имя
+            id = Console.ReadLine(); // введем айди
             f();
             InfoPrint();
 
         }
-        public Student(string name, string id)
+        public Student(string name, string id) // конструктор с параметрами
         {
-            this.name = name;
-            this.id = id;
+            this.name = name; // имя
+            this.id = id; // айди
             f();
             InfoPrint();
 
         }
-        public void f()
+        public void f() // метод года
         {
             year = Convert.ToInt32(Console.ReadLine());
         }
-        public void InfoPrint()
+        public void InfoPrint() // метод введения данных 
         {
             Console.WriteLine("name: " + name);
             Console.WriteLine("id: " + id);

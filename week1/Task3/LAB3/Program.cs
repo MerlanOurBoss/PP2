@@ -11,21 +11,21 @@ namespace Lab_3
         static void Main(string[] args)
         {
             int n = Convert.ToInt32(Console.ReadLine());
-            // We add integer n this the size of the array.
+            // Мы добавляем целое число n это размер массива.
             string[] numb = Console.ReadLine().Split(' ');
-            // This is an array of strings, I need this in the future to write all the elements of the array.
+            // Это массив строк, он мне понадобится в будущем, чтобы записать все элементы массива.
             int[] array = new int[n];
-            // This is an array of integers.
+            // Это массив целых чисел.
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = int.Parse(numb[i]);
             }
-            // I opened a loop(for) to write all the elements from the array.
+            // Я открыл цикл , чтобы записать все элементы из массива.
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i] + " " + array[i] + " ");
             }
-            // This time I opened a loop(for) to write duplicate array elements.
+            // На этот раз я открыл цикл для записи дублирующих элементов массива.
             Console.ReadKey();
         }
     }

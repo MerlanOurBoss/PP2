@@ -12,24 +12,25 @@ namespace Task_4
 
         static void Main(string[] args)
         {
-            string Filename = "info.txt";
-            string sourcePath = @"C:\Users\Merlan\Desktop\LABS\path";
-            string destPath = @"C:\Users\Merlan\Desktop\LABS\path 1";
-                
-            string sourceFile = Path.Combine(sourcePath, Filename);
-            string destFile = Path.Combine(destPath, Filename);
+            string Filename = "info.txt";//көшетін файлды енгіземіз
+            string sourcePath = @"C:\Users\Merlan\Desktop\LABS\path";//файлдың орналасқан жерін көрсетеміз
+            string destPath = @"C:\Users\Merlan\Desktop\LABS\path 1";//файлдың баратын жерін көрсетеміз
+                 // Path класын файлдарға,папкаларға баратын жолдарды басқару үшін қолданамыз
 
-            File.Copy(sourceFile, destFile);
+            string sourceFile = Path.Combine(sourcePath, Filename);//файлдың орналасқан жері
+            string destFile = Path.Combine(destPath, Filename);//файлдың баратын жері
+
+            File.Copy(sourceFile, destFile);//файлды көшіру операциясы және жолды көрсетеміз    
             Console.WriteLine("File copied");
 
-            if (File.Exists(@"C:\Users\Merlan\Desktop\LABS\path\info.txt"))
+            if (File.Exists(@"C:\Users\Merlan\Desktop\LABS\path\info.txt"))//Егер файл бастапқы жерінде болса
             {
                 try
                 {
-                    File.Delete(@"C:\Users\Merlan\Desktop\LABS\path\info.txt");
+                    File.Delete(@"C:\Users\Merlan\Desktop\LABS\path\info.txt");//оны кетіреді
                     Console.WriteLine("File deleated");
                 }
-                catch (IOException)
+                catch (IOException)//Егер болмаса ошибка шығарады
                 {
                     Console.WriteLine("IOException");
                 }
